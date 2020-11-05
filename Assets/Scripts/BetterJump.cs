@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BetterJump : MonoBehaviour
 {
+    /*
     public float fallMultiplier = 2.5f;
     public float lowJumpMultiplier = 2;
     Rigidbody2D theRB;
@@ -24,5 +25,5 @@ public class BetterJump : MonoBehaviour
         {
             theRB.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         }
-    }
+    }*/
 }

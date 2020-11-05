@@ -23,11 +23,16 @@ public class PlayerController : MonoBehaviour
     public float hangTime = 0.2f;
     public float hangCount;
 
+    // Gravity
+    private bool isUpsideDown;
+    public float gravityCount; 
+
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        theRB = GetComponent<Rigidbody2D>();
+        isUpsideDown = false;
     }
 
     // Update is called once per frame
@@ -38,7 +43,8 @@ public class PlayerController : MonoBehaviour
 
         if (isGrounded)
         {
-            canDoubleJump = true;
+            //canDoubleJump = true;
+            gravityCount = 2;
         }
 
 
@@ -53,13 +59,22 @@ public class PlayerController : MonoBehaviour
             
         }else if(Input.GetButtonDown("Jump") && !isGrounded && canDoubleJump)
         {
-            theRB.velocity = new Vector2(theRB.velocity.x, doubleJumpForce);
-            canDoubleJump = false;
+            //theRB.velocity = new Vector2(theRB.velocity.x, doubleJumpForce);
+            //canDoubleJump = false;
+        }
+
+        // Invert Gravity
+        if (Input.GetKeyDown(KeyCode.Z) && (isGrounded || gravityCount > 0))
+        {
+            theRB.gravityScale *= -1;
+            transform.localScale = new Vector3(transform.localScale.x, -transform.localScale.y, transform.localScale.z);
+            isUpsideDown = !isUpsideDown;
+            --gravityCount;
         }
 
 
-        // Coyote Time 
-        if (hangCount > 0 && Input.GetButtonDown("Jump") && !isGrounded)
+            // Coyote Time 
+            if (hangCount > 0 && Input.GetButtonDown("Jump") && !isGrounded)
         {
             Jump();
         }
