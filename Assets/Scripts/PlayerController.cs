@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController instance;
 
     public float moveSpeed;
     public float airSpeed;
@@ -25,15 +26,20 @@ public class PlayerController : MonoBehaviour
 
     // Gravity
     private bool isUpsideDown;
-    public float gravityCount; 
+    public float gravityCount;
 
-    
+    private void Awake()
+    {
+        instance = this;
+    }
     // Start is called before the first frame update
     void Start()
     {
         theRB = GetComponent<Rigidbody2D>();
         isUpsideDown = false;
     }
+
+    
 
     // Update is called once per frame
     void Update()
@@ -89,40 +95,48 @@ public class PlayerController : MonoBehaviour
             Flip();
         }
         
+    }
 
-        // METHODS:
+    // METHODS:
 
+    // Walking
+    void Walk()
+    {
+        theRB.velocity = new Vector2(moveSpeed * Input.GetAxis("Horizontal"), theRB.velocity.y);
+    }
 
-        // Jump Method 
-        void Jump()
+    // Jump Method 
+    void Jump()
+    {
+        theRB.velocity = new Vector2(theRB.velocity.x, jumpForce);
+    }
+
+    // When player changes horizontal direction 
+    void Flip()
+    {
+
+    }
+
+    // Jumping Hangtime 
+    void HangTime()
+    {
+        if (isGrounded)
         {
-            theRB.velocity = new Vector2(theRB.velocity.x, jumpForce);  
+            hangCount = hangTime;
         }
-
-        // Jumping Hangtime 
-        void HangTime()
+        else
         {
-            if (isGrounded)
-            {
-                hangCount = hangTime;
-            }
-            else
-            {
-                hangCount -= Time.deltaTime;
-            }
+            hangCount -= Time.deltaTime;
         }
+    }
 
-        // When player changes horizontal direction 
-        void Flip()
+    public void RespawnPlayer()
+    {
+        theRB.gravityScale = 1;
+        isUpsideDown = false;
+        if(transform.localScale.y < 0)
         {
-            
+            //transform.localScale = new Vector3(transform.localScale.x, -transform.localScale.y, transform.localScale.z);
         }
-
-        // Walking
-        void Walk()
-        {
-            theRB.velocity = new Vector2(moveSpeed * Input.GetAxis("Horizontal"), theRB.velocity.y);
-        }
-
     }
 }
