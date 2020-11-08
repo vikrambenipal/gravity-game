@@ -14,7 +14,6 @@ public class HealthController : MonoBehaviour
 
     public void KillPlayer()
     {
-        Debug.Log("dead");
-        //PlayerController.instance.RespawnPlayer();
+        LevelManager.instance.RespawnPlayer();
     }
 }

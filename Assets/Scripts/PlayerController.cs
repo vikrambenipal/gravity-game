@@ -130,13 +130,10 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void RespawnPlayer()
+    public void ResetPlayer()
     {
-        theRB.gravityScale = 1;
+        theRB.gravityScale = 3;
         isUpsideDown = false;
-        if(transform.localScale.y < 0)
-        {
-            //transform.localScale = new Vector3(transform.localScale.x, -transform.localScale.y, transform.localScale.z);
-        }
+        transform.localScale = new Vector3(transform.localScale.x, Mathf.Abs(transform.localScale.y), transform.localScale.z); 
     }
 }

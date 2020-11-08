@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class Checkpoint : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static Checkpoint instance;
+
+    private void Awake()
     {
-        
+        instance = this;
     }
 
-    // Update is called once per frame
-    void Update()
+    // If player enters collision zone activate checkpoint 
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        
+        if(other.tag == "Player"){
+            CheckpointController.instance.SetSpawnPoint(transform.position);
+        }
     }
+
 }

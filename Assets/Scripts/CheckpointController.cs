@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class CheckpointController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static CheckpointController instance;
+    public Vector2 spawnPoint;
+
+    private void Awake()
     {
-        
+        instance = this;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        spawnPoint = PlayerController.instance.transform.position;
+    }
+
+
+    // Set latest checkpoint for the player 
+    public void SetSpawnPoint(Vector2 newSpawnPoint)
+    {
+        spawnPoint = newSpawnPoint;
     }
 }
