@@ -18,33 +18,20 @@ public class Laser : MonoBehaviour
         transform.Rotate(Vector3.forward * rotationSpeed * Time.deltaTime);
 
         RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.up, maxDistance);
-        Debug.DrawLine(transform.position, transform.position + transform.up * maxDistance, Color.green);
 
-
-        if (hitInfo)
+        
+        if (hitInfo.collider != null)
         {
-            if (hitInfo.collider.tag == "Player")
+            Debug.DrawLine(transform.position, hitInfo.point, Color.red);
+            if (hitInfo.collider.CompareTag("Player"))
             {
-                Debug.Log("3");
-                Debug.DrawLine(transform.position, hitInfo.point, Color.red);
+                HealthController.instance.KillPlayer();
             }
         }
         else
         {
             Debug.DrawLine(transform.position, transform.position + transform.up * maxDistance, Color.green);
         }
-
         
-
-        /*
-        if (hitInfo.collider != null)
-        {
-            Debug.DrawLine(transform.position, hitInfo.point, Color.red);
-        }
-        else
-        {
-            Debug.DrawLine(transform.position, transform.position + transform.up * maxDistance, Color.green);
-        }
-        */
     }
 }
