@@ -1,12 +1,8 @@
 ﻿<Properties StartupConfiguration="{D65F430D-1037-F074-079D-4FB75F263396}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CheckpointController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Laser.cs">
     <Files>
-      <File FileName="Assets/Scripts/PlayerController.cs" Line="133" Column="12" />
-      <File FileName="Assets/Scripts/FallPlane.cs" Line="12" Column="52" />
-      <File FileName="Assets/Scripts/HealthController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Checkpoint.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/CheckpointController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/LevelManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PlayerController.cs" Line="135" Column="31" />
+      <File FileName="Assets/Scripts/Laser.cs" Line="15" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -14,7 +10,7 @@
           <Node name="Devtober Game" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="CheckpointController.cs" selected="True" />
+                <Node name="Laser.cs" selected="True" />
               </Node>
             </Node>
           </Node>
