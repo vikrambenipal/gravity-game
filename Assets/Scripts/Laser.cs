@@ -5,8 +5,11 @@ using UnityEngine;
 public class Laser : MonoBehaviour
 {
     public float rotationSpeed;
-    public float maxDistance; 
+    public float maxDistance;
     // Start is called before the first frame update
+
+    public LineRenderer lineOfSight;
+
     void Start()
     {
         
@@ -23,6 +26,7 @@ public class Laser : MonoBehaviour
         if (hitInfo.collider != null)
         {
             Debug.DrawLine(transform.position, hitInfo.point, Color.red);
+            lineOfSight.SetPosition(1, hitInfo.point);
             if (hitInfo.collider.CompareTag("Player"))
             {
                 HealthController.instance.KillPlayer();
@@ -31,7 +35,10 @@ public class Laser : MonoBehaviour
         else
         {
             Debug.DrawLine(transform.position, transform.position + transform.up * maxDistance, Color.green);
+            lineOfSight.SetPosition(1, transform.position + (transform.up * maxDistance));
         }
-        
+
+        lineOfSight.SetPosition(0, transform.position);
+
     }
 }
