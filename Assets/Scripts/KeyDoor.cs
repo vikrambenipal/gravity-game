@@ -8,6 +8,7 @@ public class KeyDoor : MonoBehaviour
     public int totalKeys;
     public int keyCount;
     public Key[] keyList;
+    public KeyLaser laser;
 
     private void Awake()
     {
@@ -27,7 +28,7 @@ public class KeyDoor : MonoBehaviour
         ++keyCount;
         if(keyCount == totalKeys)
         {
-            KeyLaser.instance.TurnOffLaser();
+            laser.TurnOffLaser();
         }
     }
 }
