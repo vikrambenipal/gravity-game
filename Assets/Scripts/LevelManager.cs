@@ -30,8 +30,8 @@ public class LevelManager : MonoBehaviour
         PlayerController.instance.gameObject.SetActive(false);
         yield return new WaitForSeconds(respawnTime);
 
-        PlayerController.instance.gameObject.SetActive(true);
         PlayerController.instance.transform.position = CheckpointController.instance.spawnPoint;
+        PlayerController.instance.gameObject.SetActive(true);
         PlayerController.instance.ResetPlayer();
     }
 

@@ -15,7 +15,7 @@ public class MovingPlatform : MonoBehaviour
     {
         pos1.position = platform.transform.position;
     }
-
+    
     // Update is called once per frame
     void Update()
     {
