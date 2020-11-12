@@ -34,4 +34,5 @@ public class LevelManager : MonoBehaviour
         PlayerController.instance.transform.position = CheckpointController.instance.spawnPoint;
         PlayerController.instance.ResetPlayer();
     }
+
 }
