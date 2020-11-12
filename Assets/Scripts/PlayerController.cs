@@ -136,4 +136,23 @@ public class PlayerController : MonoBehaviour
         isUpsideDown = false;
         transform.localScale = new Vector3(transform.localScale.x, Mathf.Abs(transform.localScale.y), transform.localScale.z); 
     }
+
+    // player interaction with moving platforms 
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if(other.gameObject.tag == "Platform")
+        {
+            Debug.Log("1");
+            transform.parent = other.transform;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Platform")
+        {
+            Debug.Log("2");
+            transform.parent = null;
+        }
+    }
 }
