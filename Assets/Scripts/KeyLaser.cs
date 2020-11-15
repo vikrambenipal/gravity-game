@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class KeyLaser : MonoBehaviour
 {
+    int layer_mask;
     public float rotationSpeed;
     public float maxDistance;
     public GameObject particle;
@@ -23,6 +24,7 @@ public class KeyLaser : MonoBehaviour
     void Start()
     {
         isActive = true;
+        layer_mask = LayerMask.GetMask("Player", "Ground");
     }
 
     // Update is called once per frame
@@ -30,7 +32,7 @@ public class KeyLaser : MonoBehaviour
     {
         transform.Rotate(Vector3.forward * rotationSpeed * Time.deltaTime);
 
-        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.up, maxDistance);
+        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.up, maxDistance, layer_mask);
 
 
         if (hitInfo.collider != null)

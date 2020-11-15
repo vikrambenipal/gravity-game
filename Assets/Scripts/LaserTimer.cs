@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LaserTimer : MonoBehaviour
 {
+    int layer_mask;
     public float rotationSpeed;
     public float maxDistance;
 
@@ -26,6 +27,7 @@ public class LaserTimer : MonoBehaviour
     {
         isOn = true;
         onTime = initialTimer;
+        layer_mask = LayerMask.GetMask("Player", "Ground");
     }
 
     // Update is called once per frame
@@ -35,7 +37,7 @@ public class LaserTimer : MonoBehaviour
         {
             transform.Rotate(Vector3.forward * rotationSpeed * Time.deltaTime);
 
-            RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.up, maxDistance);
+            RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.up, maxDistance, layer_mask);
 
 
             if (hitInfo.collider != null)
