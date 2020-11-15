@@ -20,6 +20,7 @@ public class LaserTimer : MonoBehaviour
     // Start is called before the first frame update
 
     public LineRenderer lineOfSight;
+    public GameObject particle;
 
     void Start()
     {
@@ -41,6 +42,8 @@ public class LaserTimer : MonoBehaviour
             {
                 Debug.DrawLine(transform.position, hitInfo.point, Color.red);
                 lineOfSight.SetPosition(1, hitInfo.point);
+                // particle system
+                particle.transform.position = hitInfo.point;
                 if (hitInfo.collider.CompareTag("Player"))
                 {
                     HealthController.instance.KillPlayer();
@@ -60,6 +63,7 @@ public class LaserTimer : MonoBehaviour
                 isOn = false;
                 offTime = offCount;
                 lineOfSight.gameObject.SetActive(false);
+                particle.gameObject.SetActive(false);
             }
         }
         else
@@ -70,6 +74,7 @@ public class LaserTimer : MonoBehaviour
                 isOn = true;
                 onTime = onCount;
                 lineOfSight.gameObject.SetActive(true);
+                particle.gameObject.SetActive(true);
             }
         }
     }
