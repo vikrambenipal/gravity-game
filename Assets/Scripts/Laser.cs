@@ -6,6 +6,7 @@ public class Laser : MonoBehaviour
 {
     public float rotationSpeed;
     public float maxDistance;
+    public GameObject particle;
     // Start is called before the first frame update
 
     public LineRenderer lineOfSight;
@@ -27,6 +28,10 @@ public class Laser : MonoBehaviour
         {
             Debug.DrawLine(transform.position, hitInfo.point, Color.red);
             lineOfSight.SetPosition(1, hitInfo.point);
+
+            // particle system
+            particle.transform.position = hitInfo.point;
+
             if (hitInfo.collider.CompareTag("Player"))
             {
                 HealthController.instance.KillPlayer();

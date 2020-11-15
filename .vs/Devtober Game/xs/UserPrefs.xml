@@ -1,11 +1,11 @@
 ﻿<Properties StartupConfiguration="{D65F430D-1037-F074-079D-4FB75F263396}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/LaserFollow.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Laser.cs">
     <Files>
       <File FileName="Assets/Scripts/PlayerController.cs" Line="110" Column="6" />
       <File FileName="Assets/Scripts/Laser.cs" Line="8" Column="30" />
-      <File FileName="Assets/Scripts/MovingPlatform.cs" Line="18" Column="5" />
-      <File FileName="Assets/Scripts/LaserTimer.cs" Line="7" Column="5" />
-      <File FileName="Assets/Scripts/LaserFollow.cs" Line="37" Column="22" />
+      <File FileName="Assets/Scripts/MovingPlatform.cs" />
+      <File FileName="Assets/Scripts/LaserTimer.cs" />
+      <File FileName="Assets/Scripts/LaserFollow.cs" Line="46" Column="101" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,7 +13,7 @@
           <Node name="Devtober Game" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="LaserFollow.cs" selected="True" />
+                <Node name="Laser.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -23,7 +23,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="ce9f3f8f-a004-46da-85bd-a7c66e8acf4a" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="ce9e369d-ed07-477a-94a1-c4a8bdb571ed" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
