@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
 
     // Particle Effects
     public GameObject deathParticleEffect;
+    public ParticleSystem gravityParticleEffect;
 
     private void Awake()
     {
@@ -77,6 +78,8 @@ public class PlayerController : MonoBehaviour
         // Invert Gravity
         if (Input.GetKeyDown(KeyCode.Z) && (isGrounded || gravityCount > 0))
         {
+            gravityParticleEffect.gravityModifier *= -1;
+            Instantiate(gravityParticleEffect, transform.position, Quaternion.identity);
             theRB.gravityScale *= -1;
             transform.localScale = new Vector3(transform.localScale.x, -transform.localScale.y, transform.localScale.z);
             isUpsideDown = !isUpsideDown;
