@@ -6,6 +6,7 @@ public class KeyLaser : MonoBehaviour
 {
     public float rotationSpeed;
     public float maxDistance;
+    public GameObject particle;
 
     public bool isActive;
 
@@ -36,6 +37,8 @@ public class KeyLaser : MonoBehaviour
         {
             Debug.DrawLine(transform.position, hitInfo.point, Color.red);
             lineOfSight.SetPosition(1, hitInfo.point);
+            // particle system
+            particle.transform.position = hitInfo.point;
             if (hitInfo.collider.CompareTag("Player") && isActive)
             {
                 HealthController.instance.KillPlayer();
@@ -54,6 +57,7 @@ public class KeyLaser : MonoBehaviour
     public void TurnOffLaser()
     {
         lineOfSight.gameObject.SetActive(false);
+        particle.gameObject.SetActive(false);
         isActive = false;
     }
 }
