@@ -7,6 +7,7 @@ public class Key : MonoBehaviour
     //public KeyDoor door;
     public bool isCollected;
     public KeyDoor door;
+    public GameObject particle;
 
     private void Start()
     {
@@ -18,6 +19,7 @@ public class Key : MonoBehaviour
     {
         if(other.CompareTag("Player") && !isCollected)
         {
+            Instantiate(particle, transform.position, Quaternion.identity);
             isCollected = true;
             door.KeyUpdate();
             this.gameObject.SetActive(false);

@@ -140,6 +140,7 @@ public class PlayerController : MonoBehaviour
 
     public void ResetPlayer()
     {
+        gravityParticleEffect.gravityModifier = 1;
         theRB.gravityScale = 3;
         isUpsideDown = false;
         transform.localScale = new Vector3(transform.localScale.x, Mathf.Abs(transform.localScale.y), transform.localScale.z); 
