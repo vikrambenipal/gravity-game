@@ -28,6 +28,9 @@ public class PlayerController : MonoBehaviour
     private bool isUpsideDown;
     public float gravityCount;
 
+    // Particle Effects
+    public GameObject deathParticleEffect;
+
     private void Awake()
     {
         instance = this;
@@ -37,6 +40,8 @@ public class PlayerController : MonoBehaviour
     {
         theRB = GetComponent<Rigidbody2D>();
         isUpsideDown = false;
+
+        deathParticleEffect.SetActive(false);
     }
 
     

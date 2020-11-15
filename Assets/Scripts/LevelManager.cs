@@ -27,6 +27,10 @@ public class LevelManager : MonoBehaviour
 
     private IEnumerator RespawnCo()
     {
+        PlayerController.instance.deathParticleEffect.SetActive(true);
+        Instantiate(PlayerController.instance.deathParticleEffect, PlayerController.instance.transform.position, Quaternion.identity);
+        PlayerController.instance.deathParticleEffect.SetActive(false);
+
         PlayerController.instance.gameObject.SetActive(false);
         yield return new WaitForSeconds(respawnTime);
 
