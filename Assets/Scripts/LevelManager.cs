@@ -31,6 +31,10 @@ public class LevelManager : MonoBehaviour
         PlayerController.instance.deathParticleEffect.SetActive(true);
 
         Instantiate(PlayerController.instance.deathParticleEffect, PlayerController.instance.transform.position, Quaternion.identity);
+
+        // In the scenerio a player dies while on a moving platform:
+        PlayerController.instance.transform.parent = null;
+
         PlayerController.instance.gameObject.SetActive(false);
         yield return new WaitForSeconds(deathAnimationTime);
         PlayerController.instance.deathParticleEffect.SetActive(false);

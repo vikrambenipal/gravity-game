@@ -1,21 +1,22 @@
 ﻿<Properties StartupConfiguration="{D65F430D-1037-F074-079D-4FB75F263396}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/FadeToBlack.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/LevelManager.cs">
     <Files>
       <File FileName="Assets/Scripts/PlayerController.cs" Line="143" Column="47" />
       <File FileName="Assets/Scripts/MovingPlatform.cs" />
-      <File FileName="Assets/Scripts/LevelManager.cs" />
+      <File FileName="Assets/Scripts/LevelManager.cs" Line="30" Column="6" />
       <File FileName="Assets/Scripts/Laser.cs" />
-      <File FileName="Assets/Scripts/LaserTimer.cs" Line="40" Column="111" />
+      <File FileName="Assets/Scripts/LaserTimer.cs" />
       <File FileName="Assets/Scripts/KeyLaser.cs" />
-      <File FileName="Assets/FadeToBlack.cs" Line="7" Column="6" />
+      <File FileName="Assets/FadeToBlack.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Devtober Game" expanded="True">
             <Node name="Assets" expanded="True">
-              <Node name="Scripts" expanded="True" />
-              <Node name="FadeToBlack.cs" selected="True" />
+              <Node name="Scripts" expanded="True">
+                <Node name="LevelManager.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>
@@ -24,7 +25,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="ce9e369d-ed07-477a-94a1-c4a8bdb571ed" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="65670897-603b-4e68-8650-f3f76e6d1733" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
