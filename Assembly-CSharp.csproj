@@ -82,6 +82,7 @@
     <Compile Include="Assets\Scripts\Powerup.cs" />
     <Compile Include="Assets\Scripts\PowerupManager.cs" />
     <Compile Include="Assets\Scripts\RoomCamera.cs" />
+    <Compile Include="Assets\Scripts\Spike.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/vikrambenipal/Desktop/Repos/Unity2D/Text101/Devtober Game/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

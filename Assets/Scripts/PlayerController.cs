@@ -32,6 +32,9 @@ public class PlayerController : MonoBehaviour
     public GameObject deathParticleEffect;
     public ParticleSystem gravityParticleEffect;
 
+    // Sprite
+    private bool facingRight = true;
+
     private void Awake()
     {
         instance = this;
@@ -98,10 +101,17 @@ public class PlayerController : MonoBehaviour
         Walk();
 
         // Flip Direction / Sprite Method 
-        if(Input.GetAxis("Horizontal") > 0)
+        if(Input.GetAxis("Horizontal") > 0 && !facingRight)
         {
             Flip();
+            facingRight = true;
         }
+        else if(Input.GetAxis("Horizontal") < 0 && facingRight)
+        {
+            Flip();
+            facingRight = false;
+        }
+
         
     }
 
@@ -122,7 +132,7 @@ public class PlayerController : MonoBehaviour
     // When player changes horizontal direction 
     void Flip()
     {
-
+        transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
     }
 
     // Jumping Hangtime 
