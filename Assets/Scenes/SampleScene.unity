@@ -20520,6 +20520,7 @@ GameObject:
   - component: {fileID: 893567762}
   - component: {fileID: 893567765}
   - component: {fileID: 893567764}
+  - component: {fileID: 893567766}
   m_Layer: 0
   m_Name: Gem
   m_TagString: Untagged
@@ -20585,7 +20586,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 893567761}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.88, y: -1.24, z: 0}
+  m_LocalPosition: {x: -7.42, y: 1.17, z: 0}
   m_LocalScale: {x: 0.555, y: 0.555, z: 0.555}
   m_Children:
   - {fileID: 637213106}
@@ -20631,6 +20632,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.98, y: 1.22}
   m_EdgeRadius: 0
+--- !u!114 &893567766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 893567761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7c049e38a9b042cfbe86419b8795fb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frequency: 1.5
+  amplitude: 0.15
 --- !u!1001 &937061492
 PrefabInstance:
   m_ObjectHideFlags: 0
