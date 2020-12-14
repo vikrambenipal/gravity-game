@@ -11,9 +11,11 @@ public class Powerup : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             
-            Debug.Log("Works");
             PlayerController.instance.gravityCount = 2;
+            PlayerController.instance.anim.SetInteger("gravityCount", PlayerController.instance.gravityCount);
             parent.RespawnPowerUp();
+
+            
         }
     }
 

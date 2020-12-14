@@ -1,14 +1,9 @@
 ﻿<Properties StartupConfiguration="{D65F430D-1037-F074-079D-4FB75F263396}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/KeyLaser.cs">
     <Files>
-      <File FileName="Assets/Scripts/PlayerController.cs" Line="143" Column="47" />
-      <File FileName="Assets/Scripts/MovingPlatform.cs" />
-      <File FileName="Assets/Scripts/LevelManager.cs" Line="36" Column="59" />
-      <File FileName="Assets/Scripts/Laser.cs" />
-      <File FileName="Assets/Scripts/LaserTimer.cs" />
-      <File FileName="Assets/Scripts/KeyLaser.cs" Line="1" Column="1" />
-      <File FileName="Assets/FadeToBlack.cs" />
-      <File FileName="Assets/Scripts/Spike.cs" Line="12" Column="1" />
+      <File FileName="Assets/Scripts/PlayerController.cs" Line="39" Column="11" />
+      <File FileName="Assets/Scripts/LevelManager.cs" Line="11" Column="25" />
+      <File FileName="Assets/Scripts/KeyLaser.cs" Line="62" Column="9" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">

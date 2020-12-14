@@ -8,6 +8,7 @@ public class LevelManager : MonoBehaviour
     public static LevelManager instance;
     public float respawnTime;
     public float deathAnimationTime;
+    public int gemCount;
 
     // Start is called before the first frame update
     void Start()
@@ -45,6 +46,10 @@ public class LevelManager : MonoBehaviour
 
         PlayerController.instance.transform.position = CheckpointController.instance.spawnPoint;
         PlayerController.instance.gameObject.SetActive(true);
+
+        PlayerController.instance.transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        PlayerController.instance.facingRight = true;
+
         PlayerController.instance.ResetPlayer();
         transition.SetTrigger("End");
     }

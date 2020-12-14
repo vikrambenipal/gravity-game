@@ -26,14 +26,17 @@ public class PlayerController : MonoBehaviour
 
     // Gravity
     private bool isUpsideDown;
-    public float gravityCount;
+    public int gravityCount;
 
     // Particle Effects
     public GameObject deathParticleEffect;
     public ParticleSystem gravityParticleEffect;
 
     // Sprite
-    private bool facingRight = true;
+    public bool facingRight = true;
+
+    // Animator
+    public Animator anim;
 
     private void Awake()
     {
@@ -46,6 +49,8 @@ public class PlayerController : MonoBehaviour
         isUpsideDown = false;
 
         deathParticleEffect.SetActive(false);
+
+        anim = GetComponent<Animator>();
     }
 
     
@@ -112,7 +117,9 @@ public class PlayerController : MonoBehaviour
             facingRight = false;
         }
 
-        
+        anim.SetBool("isGrounded", isGrounded);
+        anim.SetInteger("gravityCount", gravityCount);
+
     }
 
     // METHODS:
