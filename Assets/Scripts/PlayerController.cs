@@ -38,6 +38,9 @@ public class PlayerController : MonoBehaviour
     // Animator
     public Animator anim;
 
+    // Stop Input
+    public bool stopInput;
+
     private void Awake()
     {
         instance = this;

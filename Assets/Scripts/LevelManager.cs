@@ -54,5 +54,14 @@ public class LevelManager : MonoBehaviour
         transition.SetTrigger("End");
     }
 
+    public void EndLevel()
+    {
+        //StartCoroutine(EndLevelCo());
+    }
+
+    //private IEnumerator EndLevelCo()
+    //{
+
+    //}
 
 }
