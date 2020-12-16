@@ -63,9 +63,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\FadeToBlack.cs" />
+    <Compile Include="Assets\Scripts\Angie.cs" />
+    <Compile Include="Assets\Scripts\AngieParent.cs" />
     <Compile Include="Assets\Scripts\BetterJump.cs" />
     <Compile Include="Assets\Scripts\Checkpoint.cs" />
     <Compile Include="Assets\Scripts\CheckpointController.cs" />
+    <Compile Include="Assets\Scripts\CirlceEnemy.cs" />
     <Compile Include="Assets\Scripts\FallPlane.cs" />
     <Compile Include="Assets\Scripts\Gem.cs" />
     <Compile Include="Assets\Scripts\HealthController.cs" />

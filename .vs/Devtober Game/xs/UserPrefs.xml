@@ -1,10 +1,14 @@
 ﻿<Properties StartupConfiguration="{D65F430D-1037-F074-079D-4FB75F263396}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ItemFloat.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/AngieParent.cs">
     <Files>
       <File FileName="Assets/Scripts/PlayerController.cs" Line="39" Column="11" />
       <File FileName="Assets/Scripts/LevelManager.cs" Line="11" Column="25" />
       <File FileName="Assets/Scripts/KeyLaser.cs" Line="62" Column="9" />
-      <File FileName="Assets/Scripts/ItemFloat.cs" Line="19" Column="1" />
+      <File FileName="Assets/Scripts/ItemFloat.cs" Line="27" Column="1" />
+      <File FileName="Assets/Scripts/CirlceEnemy.cs" Line="7" Column="5" />
+      <File FileName="Assets/Scripts/Spike.cs" Line="9" Column="6" />
+      <File FileName="Assets/Scripts/Angie.cs" Line="30" Column="26" />
+      <File FileName="Assets/Scripts/AngieParent.cs" Line="7" Column="51" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -12,7 +16,7 @@
           <Node name="Devtober Game" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="ItemFloat.cs" selected="True" />
+                <Node name="AngieParent.cs" selected="True" />
               </Node>
             </Node>
           </Node>

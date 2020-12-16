@@ -19,8 +19,8 @@ TagManager:
   - Ground
   - Player
   - Item
-  - 
-  - 
+  - Enemy
+  - Effect
   - 
   - 
   - 
@@ -43,4 +43,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Enemy
+    uniqueID: 2620640653
+    locked: 0
+  - name: Effect
+    uniqueID: 729445877
     locked: 0

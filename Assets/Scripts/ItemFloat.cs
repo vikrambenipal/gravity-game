@@ -9,6 +9,9 @@ public class ItemFloat : MonoBehaviour
     public float frequency = 1;
     public float amplitude = 0.5f;
 
+    public bool vertical = true;
+    public bool horizontal = false;
+
     private void Start()
     {
         positionOffset = transform.position;
@@ -16,9 +19,20 @@ public class ItemFloat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        tempPosition = positionOffset;
-        tempPosition.y += Mathf.Sin(Time.fixedTime * Mathf.PI * frequency) * amplitude;
 
-        transform.position = tempPosition;
+        if (vertical)
+        {
+            tempPosition = positionOffset;
+            tempPosition.y += Mathf.Sin(Time.fixedTime * Mathf.PI * frequency) * amplitude;
+
+            transform.position = tempPosition;
+        }else if (horizontal)
+        {
+            tempPosition = positionOffset;
+            tempPosition.x += Mathf.Sin(Time.fixedTime * Mathf.PI * frequency) * amplitude;
+
+            transform.position = tempPosition;
+        }
+        
     }
 }
