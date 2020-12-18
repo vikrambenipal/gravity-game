@@ -36,11 +36,7 @@ public class LevelManager : MonoBehaviour
         // In the scenerio a player dies while on a moving platform:
         PlayerController.instance.transform.parent = null;
 
-        // If a Player was holding a Gem
-        if(PlayerController.instance.playerGemCarry != null)
-        {
-            PlayerController.instance.playerGemCarry.RespawnGem();
-        }
+        
 
         PlayerController.instance.gameObject.SetActive(false);
         yield return new WaitForSeconds(deathAnimationTime);
@@ -49,6 +45,7 @@ public class LevelManager : MonoBehaviour
 
         transition.SetTrigger("Start");
         yield return new WaitForSeconds(respawnTime);
+        
 
         PlayerController.instance.transform.position = CheckpointController.instance.spawnPoint;
         PlayerController.instance.gameObject.SetActive(true);
@@ -57,6 +54,11 @@ public class LevelManager : MonoBehaviour
         PlayerController.instance.facingRight = true;
 
         PlayerController.instance.ResetPlayer();
+        // If a Player was holding a Gem
+        if (PlayerController.instance.playerGemCarry != null)
+        {
+            PlayerController.instance.playerGemCarry.RespawnGem();
+        }
         transition.SetTrigger("End");
     }
 
