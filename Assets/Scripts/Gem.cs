@@ -5,6 +5,7 @@ using UnityEngine;
 public class Gem : MonoBehaviour
 {
     public GameObject particle;
+    public bool isCollected = false;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -12,7 +13,14 @@ public class Gem : MonoBehaviour
         {
             gameObject.SetActive(false);
             Instantiate(particle, transform.position, Quaternion.identity);
-            LevelManager.instance.gemCount++;
+            isCollected = true;
+            PlayerController.instance.playerGemCarry = this;
         }
+    }
+
+    public void RespawnGem()
+    {
+        gameObject.SetActive(true);
+        isCollected = false;
     }
 }

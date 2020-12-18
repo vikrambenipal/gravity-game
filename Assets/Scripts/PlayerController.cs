@@ -41,6 +41,9 @@ public class PlayerController : MonoBehaviour
     // Stop Input
     public bool stopInput;
 
+    // Gem Carrier
+    public Gem playerGemCarry = null;
+
     private void Awake()
     {
         instance = this;

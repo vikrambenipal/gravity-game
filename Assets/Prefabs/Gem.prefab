@@ -124,6 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particle: {fileID: 946797931641661062}
+  isCollected: 0
 --- !u!114 &946797931366366241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,6 +139,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frequency: 1.5
   amplitude: 0.15
+  vertical: 1
+  horizontal: 0
 --- !u!1 &946797931641661062
 GameObject:
   m_ObjectHideFlags: 0

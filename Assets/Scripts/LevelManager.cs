@@ -36,6 +36,12 @@ public class LevelManager : MonoBehaviour
         // In the scenerio a player dies while on a moving platform:
         PlayerController.instance.transform.parent = null;
 
+        // If a Player was holding a Gem
+        if(PlayerController.instance.playerGemCarry != null)
+        {
+            PlayerController.instance.playerGemCarry.RespawnGem();
+        }
+
         PlayerController.instance.gameObject.SetActive(false);
         yield return new WaitForSeconds(deathAnimationTime);
         PlayerController.instance.deathParticleEffect.SetActive(false);
