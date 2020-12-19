@@ -174,7 +174,6 @@ public class PlayerController : MonoBehaviour
     {
         if(other.gameObject.tag == "Platform")
         {
-            Debug.Log("1");
             transform.parent = other.transform;
         }
     }
@@ -183,7 +182,6 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.tag == "Platform")
         {
-            Debug.Log("2");
             transform.parent = null;
         }
     }

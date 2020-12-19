@@ -13,7 +13,8 @@ public class LevelManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        instance = this;   
+        instance = this;
+        
     }
 
     // Update is called once per frame
@@ -50,7 +51,7 @@ public class LevelManager : MonoBehaviour
         PlayerController.instance.transform.position = CheckpointController.instance.spawnPoint;
         PlayerController.instance.gameObject.SetActive(true);
 
-        PlayerController.instance.transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        PlayerController.instance.transform.localScale = new Vector3(Mathf.Abs(PlayerController.instance.transform.localScale.x), PlayerController.instance.transform.localScale.y, PlayerController.instance.transform.localScale.z);
         PlayerController.instance.facingRight = true;
 
         PlayerController.instance.ResetPlayer();
