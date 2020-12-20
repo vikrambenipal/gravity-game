@@ -131,7 +131,7 @@ PrefabInstance:
     - target: {fileID: 5837814357832211527, guid: cab30fec0dc82493694bd274f61a2543,
         type: 3}
       propertyPath: m_Name
-      value: LaserTimer (1)
+      value: LaserTimer
       objectReference: {fileID: 0}
     - target: {fileID: 5837814357832211546, guid: cab30fec0dc82493694bd274f61a2543,
         type: 3}
@@ -913,12 +913,12 @@ PrefabInstance:
     - target: {fileID: 2223506267072198022, guid: 601ba7598f13e41eeac52720ecb9d849,
         type: 3}
       propertyPath: rotationSpeed
-      value: 20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2223506267072198023, guid: 601ba7598f13e41eeac52720ecb9d849,
         type: 3}
       propertyPath: m_Name
-      value: LaserStraight (1)
+      value: LaserStraight
       objectReference: {fileID: 0}
     - target: {fileID: 2223506267072198042, guid: 601ba7598f13e41eeac52720ecb9d849,
         type: 3}
