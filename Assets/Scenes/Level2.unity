@@ -910,6 +910,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2223506267072198022, guid: 601ba7598f13e41eeac52720ecb9d849,
+        type: 3}
+      propertyPath: rotationSpeed
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 2223506267072198023, guid: 601ba7598f13e41eeac52720ecb9d849,
         type: 3}
       propertyPath: m_Name
@@ -1114,6 +1119,31 @@ MonoBehaviour:
   isCollected: 0
   door: {fileID: 1192863297}
   particle: {fileID: 1070041234}
+--- !u!1 &825804962 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2300608438455158726, guid: 6a343e70a26b54111b855c0ac44bdd2f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1192863296}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &825804967
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 825804962}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3be7222529e6f44fa9ca5eca15bb2aa8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1070041234
 GameObject:
   m_ObjectHideFlags: 0
@@ -5989,6 +6019,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2300608438455158747, guid: 6a343e70a26b54111b855c0ac44bdd2f,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300608438455158747, guid: 6a343e70a26b54111b855c0ac44bdd2f,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5477969977596859474, guid: 6a343e70a26b54111b855c0ac44bdd2f,
         type: 3}
       propertyPath: m_LocalPosition.y
