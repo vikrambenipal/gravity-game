@@ -18,9 +18,13 @@ public class Checkpoint : MonoBehaviour
             CheckpointController.instance.SetSpawnPoint(transform.position);
         }
 
-        if(LevelManager.instance.currentDoor.cp == this)
+        if(LevelManager.instance.currentDoor)
         {
-            LevelManager.instance.currentDoor.permaOff = true;
+            if (LevelManager.instance.currentDoor.cp == this)
+            {
+                LevelManager.instance.currentDoor.permaOff = true;
+            }
+            
         }
     }
 

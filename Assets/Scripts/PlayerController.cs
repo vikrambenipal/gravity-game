@@ -40,6 +40,7 @@ public class PlayerController : MonoBehaviour
 
     // Stop Input
     public bool stopInput;
+    public bool isDead = false;
 
     // Gem Carrier
     public Gem playerGemCarry = null;
@@ -90,7 +91,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // Invert Gravity
-        if (Input.GetKeyDown(KeyCode.Z) && (isGrounded || gravityCount > 0))
+        if (!isDead && Input.GetKeyDown(KeyCode.Z) && (isGrounded || gravityCount > 0))
         {
             gravityParticleEffect.gravityModifier *= -1;
             Instantiate(gravityParticleEffect, transform.position, Quaternion.identity);
@@ -102,14 +103,18 @@ public class PlayerController : MonoBehaviour
 
 
             // Coyote Time 
-            if (hangCount > 0 && Input.GetButtonDown("Jump") && !isGrounded)
+        if (hangCount > 0 && Input.GetButtonDown("Jump") && !isGrounded)
         {
             Jump();
         }
 
 
         // Walk
-        Walk();
+        if (!isDead)
+        {
+            Walk();
+        }
+        
 
         // Flip Direction / Sprite Method 
         if(Input.GetAxis("Horizontal") > 0 && !facingRight)

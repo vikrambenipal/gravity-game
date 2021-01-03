@@ -10,8 +10,7 @@ public class LevelManager : MonoBehaviour
     public float deathAnimationTime;
     public int gemCount;
 
-    public KeyDoor currentDoor;
-
+    public KeyDoor currentDoor = null;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,6 +41,7 @@ public class LevelManager : MonoBehaviour
         
 
         PlayerController.instance.gameObject.SetActive(false);
+        PlayerController.instance.isDead = true;
         yield return new WaitForSeconds(deathAnimationTime);
         PlayerController.instance.deathParticleEffect.SetActive(false);
 
@@ -57,6 +57,7 @@ public class LevelManager : MonoBehaviour
         PlayerController.instance.facingRight = true;
 
         PlayerController.instance.ResetPlayer();
+
         // If a Player was holding a Gem
         if (PlayerController.instance.playerGemCarry != null)
         {
@@ -71,6 +72,15 @@ public class LevelManager : MonoBehaviour
         
 
         transition.SetTrigger("End");
+        
+        StartCoroutine(PlayerCanMoveAgainCo());
+        
+    }
+
+    private IEnumerator PlayerCanMoveAgainCo()
+    {
+        yield return new WaitForSeconds(0.75f);
+        PlayerController.instance.isDead = false;
     }
 
     public void EndLevel()
