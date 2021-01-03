@@ -23,7 +23,7 @@ public class Key : MonoBehaviour
             isCollected = true;
             door.KeyUpdate();
             this.gameObject.SetActive(false);
-            Debug.Log("Got key");
+            LevelManager.instance.currentDoor = door;
         }
     }
 }

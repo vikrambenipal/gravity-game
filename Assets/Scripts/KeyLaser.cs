@@ -62,4 +62,10 @@ public class KeyLaser : MonoBehaviour
         particle.gameObject.SetActive(false);
         isActive = false;
     }
+    public void TurnOnLaser()
+    {
+        lineOfSight.gameObject.SetActive(true);
+        particle.gameObject.SetActive(true);
+        isActive = true;
+    }
 }

@@ -10,6 +10,8 @@ public class LevelManager : MonoBehaviour
     public float deathAnimationTime;
     public int gemCount;
 
+    public KeyDoor currentDoor;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -60,6 +62,14 @@ public class LevelManager : MonoBehaviour
         {
             PlayerController.instance.playerGemCarry.RespawnGem();
         }
+
+        if (currentDoor && !currentDoor.permaOff)
+        {
+            currentDoor.RespawnKeys();
+            currentDoor.laser.TurnOnLaser();
+        }
+        
+
         transition.SetTrigger("End");
     }
 

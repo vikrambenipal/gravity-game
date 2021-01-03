@@ -9,6 +9,10 @@ public class KeyDoor : MonoBehaviour
     public int keyCount;
     public Key[] keyList;
     public KeyLaser laser;
+    public bool permaOff = false;
+
+    // cp is used to determine whether or not to permantently turn off the laser once a player has reached a certain point 
+    public Checkpoint cp;
 
     private void Awake()
     {
@@ -23,12 +27,24 @@ public class KeyDoor : MonoBehaviour
         totalKeys = keyList.Length;
     }
 
+
     public void KeyUpdate()
     {
         ++keyCount;
         if(keyCount == totalKeys)
         {
             laser.TurnOffLaser();
+        }
+    }
+
+    public void RespawnKeys()
+    {
+        int len = keyList.Length;
+        for(int i = 0; i < len; ++i)
+        {
+            keyList[i].isCollected = false;
+            keyList[i].gameObject.SetActive(true);
+            keyCount = 0;
         }
     }
 }

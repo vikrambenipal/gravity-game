@@ -36,8 +36,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1674326643
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: bb188dcc35d9d41f18ec6d2dc5c6303c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4995,6 +4995,8 @@ MonoBehaviour:
   keyCount: 0
   keyList: []
   laser: {fileID: 5477969978436679173}
+  permaOff: 0
+  cp: {fileID: 0}
 --- !u!1001 &4725827845315611242
 PrefabInstance:
   m_ObjectHideFlags: 0

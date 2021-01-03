@@ -17,6 +17,11 @@ public class Checkpoint : MonoBehaviour
         if(other.tag == "Player"){
             CheckpointController.instance.SetSpawnPoint(transform.position);
         }
+
+        if(LevelManager.instance.currentDoor.cp == this)
+        {
+            LevelManager.instance.currentDoor.permaOff = true;
+        }
     }
 
 }
