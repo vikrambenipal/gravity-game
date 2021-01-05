@@ -54,9 +54,7 @@ public class PlayerController : MonoBehaviour
     {
         theRB = GetComponent<Rigidbody2D>();
         isUpsideDown = false;
-
         deathParticleEffect.SetActive(false);
-
         anim = GetComponent<Animator>();
     }
 
@@ -67,31 +65,18 @@ public class PlayerController : MonoBehaviour
     {
         // Ground Collision Detection 
         isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, .3f, whatIsGround);
-
         if (isGrounded)
         {
-            //canDoubleJump = true;
             gravityCount = 2;
         }
 
 
         // Coyote time set-up
         HangTime();
-        
-
-        // Jump on input while on ground 
-        if (Input.GetButtonDown("Jump") && isGrounded)
-        {
-            Jump();
-            
-        }else if(Input.GetButtonDown("Jump") && !isGrounded && canDoubleJump)
-        {
-            //theRB.velocity = new Vector2(theRB.velocity.x, doubleJumpForce);
-            //canDoubleJump = false;
-        }
+     
 
         // Invert Gravity
-        if (!isDead && Input.GetKeyDown(KeyCode.Z) && (isGrounded || gravityCount > 0))
+        if (!PauseMenu.instance.isPaused && !isDead && Input.GetKeyDown(KeyCode.Z) && (isGrounded || gravityCount > 0))
         {
             gravityParticleEffect.gravityModifier *= -1;
             Instantiate(gravityParticleEffect, transform.position, Quaternion.identity);
@@ -99,13 +84,6 @@ public class PlayerController : MonoBehaviour
             transform.localScale = new Vector3(transform.localScale.x, -transform.localScale.y, transform.localScale.z);
             isUpsideDown = !isUpsideDown;
             --gravityCount;
-        }
-
-
-            // Coyote Time 
-        if (hangCount > 0 && Input.GetButtonDown("Jump") && !isGrounded)
-        {
-            Jump();
         }
 
 
@@ -139,12 +117,6 @@ public class PlayerController : MonoBehaviour
     void Walk()
     {
         theRB.velocity = new Vector2(moveSpeed * Input.GetAxis("Horizontal"), theRB.velocity.y);
-    }
-
-    // Jump Method 
-    void Jump()
-    {
-        theRB.velocity = new Vector2(theRB.velocity.x, jumpForce);
     }
 
     // When player changes horizontal direction 

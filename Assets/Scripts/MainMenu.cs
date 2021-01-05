@@ -6,21 +6,11 @@ using UnityEngine.SceneManagement; // used to move between scenes
 public class MainMenu : MonoBehaviour
 {
     public string startScene;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    //public Animator transition;
 
     public void StartGame()
     {
+        //transition.SetTrigger("Start");
         SceneManager.LoadScene(startScene);
     }
 
