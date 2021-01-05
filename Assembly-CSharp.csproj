@@ -83,6 +83,7 @@
     <Compile Include="Assets\Scripts\LaserTimer.cs" />
     <Compile Include="Assets\Scripts\LaserTimerManager.cs" />
     <Compile Include="Assets\Scripts\LevelManager.cs" />
+    <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\MovingPlatform.cs" />
     <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
