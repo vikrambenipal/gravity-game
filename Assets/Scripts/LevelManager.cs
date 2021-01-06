@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
@@ -9,6 +10,10 @@ public class LevelManager : MonoBehaviour
     public float respawnTime;
     public float deathAnimationTime;
     public int gemCount;
+    public float endLevelWait;
+    public float bufferTimeFade;
+    public GameObject levelCompletedText;
+    public string nextLevel;
 
     public KeyDoor currentDoor = null;
     // Start is called before the first frame update
@@ -85,12 +90,17 @@ public class LevelManager : MonoBehaviour
 
     public void EndLevel()
     {
-        //StartCoroutine(EndLevelCo());
+        StartCoroutine(EndLevelCo());
     }
 
-    //private IEnumerator EndLevelCo()
-    //{
-
-    //}
+    private IEnumerator EndLevelCo()
+    {
+        PlayerController.instance.stopInput = true;
+        levelCompletedText.gameObject.SetActive(true);
+        yield return new WaitForSeconds(endLevelWait);
+        transition.SetTrigger("Start");
+        levelCompletedText.gameObject.SetActive(false);
+        SceneManager.LoadScene(nextLevel);
+    }
 
 }

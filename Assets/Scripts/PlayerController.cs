@@ -76,7 +76,7 @@ public class PlayerController : MonoBehaviour
      
 
         // Invert Gravity
-        if (!PauseMenu.instance.isPaused && !isDead && Input.GetKeyDown(KeyCode.Z) && (isGrounded || gravityCount > 0))
+        if (!stopInput && !PauseMenu.instance.isPaused && !isDead && Input.GetKeyDown(KeyCode.Z) && (isGrounded || gravityCount > 0))
         {
             gravityParticleEffect.gravityModifier *= -1;
             Instantiate(gravityParticleEffect, transform.position, Quaternion.identity);
@@ -88,7 +88,7 @@ public class PlayerController : MonoBehaviour
 
 
         // Walk
-        if (!isDead)
+        if (!isDead && !stopInput)
         {
             Walk();
         }
