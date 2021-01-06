@@ -8,7 +8,6 @@ public class EndLevel : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-            Debug.Log("Level End");
             LevelManager.instance.EndLevel();
         }
     }
