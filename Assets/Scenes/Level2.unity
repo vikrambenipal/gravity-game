@@ -7971,12 +7971,12 @@ PrefabInstance:
     - target: {fileID: 791483088262791484, guid: a8e57cfa89ad84508a79a91d06ee8624,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.65
+      value: -1.304
       objectReference: {fileID: 0}
     - target: {fileID: 791483088262791484, guid: a8e57cfa89ad84508a79a91d06ee8624,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.50606406
+      value: 0.6771137
       objectReference: {fileID: 0}
     - target: {fileID: 791483088262791484, guid: a8e57cfa89ad84508a79a91d06ee8624,
         type: 3}
@@ -8129,7 +8129,7 @@ PrefabInstance:
     - target: {fileID: 791483086715231613, guid: a8e57cfa89ad84508a79a91d06ee8624,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.81
+      value: -6.859
       objectReference: {fileID: 0}
     - target: {fileID: 791483086715231613, guid: a8e57cfa89ad84508a79a91d06ee8624,
         type: 3}
@@ -8139,12 +8139,12 @@ PrefabInstance:
     - target: {fileID: 791483088262791484, guid: a8e57cfa89ad84508a79a91d06ee8624,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.65
+      value: -2.159
       objectReference: {fileID: 0}
     - target: {fileID: 791483088262791484, guid: a8e57cfa89ad84508a79a91d06ee8624,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.50606406
+      value: 0.758084
       objectReference: {fileID: 0}
     - target: {fileID: 791483088262791484, guid: a8e57cfa89ad84508a79a91d06ee8624,
         type: 3}
@@ -8283,7 +8283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frequency: 0.15
-  amplitude: -7
+  amplitude: -3
   vertical: 0
   horizontal: 1
 --- !u!1 &472211016
