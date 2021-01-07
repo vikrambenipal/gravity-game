@@ -134,11 +134,11 @@
     <Reference Include="Unity.TextMeshPro">
       <HintPath>/Users/vikrambenipal/Desktop/Repos/Unity2D/Text101/Devtober Game/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.UI">
-      <HintPath>/Users/vikrambenipal/Desktop/Repos/Unity2D/Text101/Devtober Game/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Performance.Profile-Analyzer.Editor">
       <HintPath>/Users/vikrambenipal/Desktop/Repos/Unity2D/Text101/Devtober Game/Library/ScriptAssemblies/Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>/Users/vikrambenipal/Desktop/Repos/Unity2D/Text101/Devtober Game/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Hub/Editor/2019.3.5f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
