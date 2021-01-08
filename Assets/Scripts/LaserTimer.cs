@@ -53,7 +53,7 @@ public class LaserTimer : MonoBehaviour
             }
             else
             {
-                Debug.DrawLine(transform.position, transform.position + transform.up * maxDistance, Color.green);
+                //Debug.DrawLine(transform.position, transform.position + transform.up * maxDistance, Color.green);
                 lineOfSight.SetPosition(1, transform.position + (transform.up * maxDistance));
             }
 
@@ -62,6 +62,7 @@ public class LaserTimer : MonoBehaviour
 
             if (onTime <= 0)
             {
+                
                 isOn = false;
                 offTime = offCount;
                 lineOfSight.gameObject.SetActive(false);
@@ -70,6 +71,8 @@ public class LaserTimer : MonoBehaviour
         }
         else
         {
+            //transform.Rotate(Vector3.forward * rotationSpeed * Time.deltaTime);
+            //RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.up, maxDistance, layer_mask);
             offTime -= Time.deltaTime;
             if (offTime <= 0)
             {

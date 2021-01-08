@@ -1,13 +1,18 @@
 ﻿<Properties StartupConfiguration="{D65F430D-1037-F074-079D-4FB75F263396}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/LaserTimer.cs">
     <Files>
       <File FileName="Assets/Scripts/LevelManager.cs" Line="101" Column="40" />
-      <File FileName="Assets/Scripts/EndLevel.cs" Line="10" Column="10" />
+      <File FileName="Assets/Scripts/EndLevel.cs" />
       <File FileName="Assets/Scripts/PlayerController.cs" Line="79" Column="27" />
       <File FileName="Assets/Scripts/CheckpointController.cs" />
       <File FileName="Assets/Scripts/Checkpoint.cs" />
       <File FileName="Assets/Scripts/MainMenu.cs" />
       <File FileName="Assets/Scripts/PauseMenu.cs" />
+      <File FileName="Assets/Scripts/LaserTimer.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/LaserTimer.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/LaserTimer.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/LaserTimer.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/LaserTimer.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,7 +20,7 @@
           <Node name="Devtober Game" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="PlayerController.cs" selected="True" />
+                <Node name="LaserTimer.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -25,7 +30,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="c7670916-5415-4cbb-89cb-a5d237f418cd" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="bf9211b9-be13-4f5a-8db7-a4cd75384162" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
