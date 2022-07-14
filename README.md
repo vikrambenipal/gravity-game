@@ -1,4 +1,4 @@
-# gravity-game
+# 2D Gravity Game Built Using Unity
 Repo for 2D game Box Guy made in Unity! This was a four month long passion project where I learned Unity by building a 2D platformer centered around the game mechanic of being able to invert your own gravity. I learned many skillsets throughout this project such as game design, game development, animation techniques such as squash and stretch, as well as iterative play-testing. Check out a demo for the game in the link below!  
 
 DEMO: https://www.youtube.com/watch?v=oJLRYG1bYd4
